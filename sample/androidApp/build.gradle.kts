@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "com.plusmobileapps.konnectivity.android"
-    compileSdk = 32
+    compileSdk = Deps.Android.compileSDK
     defaultConfig {
         applicationId = "com.plusmobileapps.konnectivity.android"
-        minSdk = 21
-        targetSdk = 32
+        minSdk = Deps.Android.minSDK
+        targetSdk = Deps.Android.targetSDK
         versionCode = 1
         versionName = "1.0"
     }
@@ -17,7 +17,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.0"
+        kotlinCompilerExtensionVersion = Deps.Compose.COMPILER_VERSION
     }
     packagingOptions {
         resources {
@@ -33,10 +33,10 @@ android {
 
 dependencies {
     implementation(project(":sample:shared"))
-    implementation("androidx.compose.ui:ui:1.2.1")
-    implementation("androidx.compose.ui:ui-tooling:1.2.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.2.1")
-    implementation("androidx.compose.foundation:foundation:1.2.1")
-    implementation("androidx.compose.material:material:1.2.1")
-    implementation("androidx.activity:activity-compose:1.5.1")
+    implementation(Deps.Compose.ui)
+    implementation(Deps.Compose.uiTooling)
+    implementation(Deps.Compose.uiToolingPreview)
+    implementation(Deps.Compose.material)
+    implementation(Deps.Compose.foundation)
+    implementation(Deps.Compose.activity)
 }
