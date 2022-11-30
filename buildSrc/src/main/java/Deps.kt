@@ -46,5 +46,10 @@ object Deps {
             const val decompose = "com.arkivanov.decompose:decompose:$VERSION"
             const val extensionsCompose = "com.arkivanov.decompose:extensions-compose-jetpack:$VERSION"
         }
+
+        object Essenty {
+            private const val VERSION = "0.6.0"
+            const val lifecycle = "com.arkivanov.essenty:lifecycle:$VERSION"
+        }
     }
 }

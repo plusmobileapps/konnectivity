@@ -18,6 +18,8 @@ kotlin {
         podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "shared"
+            export(Deps.ArkIvanov.Decompose.decompose)
+            export(Deps.ArkIvanov.Essenty.lifecycle)
         }
     }
     

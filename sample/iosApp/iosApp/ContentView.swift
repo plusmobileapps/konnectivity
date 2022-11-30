@@ -2,10 +2,14 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
-	let greet = Greeting().greet()
+    
+    @State
+    private var blocHolder = BlocHolder {
+        KonnectivityStatusBlocKt.KonnectivityStatusBloc(context: $0)
+    }
 
 	var body: some View {
-		Text(greet)
+        KonnectivityStatusView(bloc: blocHolder.bloc)
 	}
 }
 

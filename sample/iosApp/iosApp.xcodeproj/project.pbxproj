@@ -11,6 +11,11 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		1BD4C05D279FE8CA222F15AD /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604CF74C9604488EC99AAE50 /* Pods_iosApp.framework */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
+		42DF6B412937561400AA0E94 /* ObservableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF6B402937561400AA0E94 /* ObservableValue.swift */; };
+		42DF6B43293756D800AA0E94 /* MutableStateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF6B42293756D800AA0E94 /* MutableStateBuilder.swift */; };
+		42DF6B45293756F700AA0E94 /* BlocHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF6B44293756F700AA0E94 /* BlocHolder.swift */; };
+		42DF6B47293758E900AA0E94 /* KonnectivityStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF6B46293758E900AA0E94 /* KonnectivityStatusView.swift */; };
+		42DF6B4929375AA000AA0E94 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DF6B4829375AA000AA0E94 /* SystemConfiguration.framework */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -19,6 +24,11 @@
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		3225970B67641E1132DDB8DD /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
+		42DF6B402937561400AA0E94 /* ObservableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableValue.swift; sourceTree = "<group>"; };
+		42DF6B42293756D800AA0E94 /* MutableStateBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableStateBuilder.swift; sourceTree = "<group>"; };
+		42DF6B44293756F700AA0E94 /* BlocHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocHolder.swift; sourceTree = "<group>"; };
+		42DF6B46293758E900AA0E94 /* KonnectivityStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonnectivityStatusView.swift; sourceTree = "<group>"; };
+		42DF6B4829375AA000AA0E94 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		604CF74C9604488EC99AAE50 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DF6B4929375AA000AA0E94 /* SystemConfiguration.framework in Frameworks */,
 				1BD4C05D279FE8CA222F15AD /* Pods_iosApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,7 +55,6 @@
 				CE7A4A5317C7325DF898FEB8 /* Pods-iosApp.debug.xcconfig */,
 				3225970B67641E1132DDB8DD /* Pods-iosApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -54,6 +64,16 @@
 				058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		42DF6B3F293755FD00AA0E94 /* decompose */ = {
+			isa = PBXGroup;
+			children = (
+				42DF6B402937561400AA0E94 /* ObservableValue.swift */,
+				42DF6B42293756D800AA0E94 /* MutableStateBuilder.swift */,
+				42DF6B44293756F700AA0E94 /* BlocHolder.swift */,
+			);
+			path = decompose;
 			sourceTree = "<group>";
 		};
 		7555FF72242A565900829871 = {
@@ -77,8 +97,10 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				42DF6B3F293755FD00AA0E94 /* decompose */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
+				42DF6B46293758E900AA0E94 /* KonnectivityStatusView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
@@ -89,6 +111,7 @@
 		9B244BD919B4FD5B2C3F8A36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42DF6B4829375AA000AA0E94 /* SystemConfiguration.framework */,
 				604CF74C9604488EC99AAE50 /* Pods_iosApp.framework */,
 			);
 			name = Frameworks;
@@ -192,6 +215,10 @@
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				42DF6B43293756D800AA0E94 /* MutableStateBuilder.swift in Sources */,
+				42DF6B47293758E900AA0E94 /* KonnectivityStatusView.swift in Sources */,
+				42DF6B45293756F700AA0E94 /* BlocHolder.swift in Sources */,
+				42DF6B412937561400AA0E94 /* ObservableValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_TEAM = R358GFLTMU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -341,6 +369,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_TEAM = R358GFLTMU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
