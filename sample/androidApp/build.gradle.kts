@@ -39,4 +39,5 @@ dependencies {
     implementation(Deps.Compose.material)
     implementation(Deps.Compose.foundation)
     implementation(Deps.Compose.activity)
+    implementation(Deps.ArkIvanov.Decompose.extensionsCompose)
 }

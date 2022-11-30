@@ -22,7 +22,18 @@ kotlin {
     }
     
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(project(":konnectivity"))
+                implementation(Deps.Jetbrains.coroutines)
+                api(Deps.ArkIvanov.Decompose.decompose)
+                implementation(Deps.ArkIvanov.MVIKotlin.mvikotlin)
+                implementation(Deps.ArkIvanov.MVIKotlin.mvikotlinMain)
+                implementation(Deps.ArkIvanov.MVIKotlin.mvikotlinLogging)
+                implementation(Deps.ArkIvanov.MVIKotlin.mviKotlinExtensionsCoroutines)
+                implementation(Deps.ArkIvanov.MVIKotlin.rx)
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
@@ -52,7 +63,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.plusmobileapps.konnectivity"
+    namespace = "com.plusmobileapps.konnectivity.sample"
     compileSdk = Deps.Android.compileSDK
     defaultConfig {
         minSdk = Deps.Android.minSDK
