@@ -21,13 +21,22 @@ kotlin {
     }
     
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(Deps.Jetbrains.coroutines)
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
+                implementation(Deps.Jetbrains.coroutinesTesting)
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+            dependencies {
+                implementation(Deps.Android.startUp)
+            }
+        }
         val androidTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting
@@ -52,6 +61,7 @@ kotlin {
 
 android {
     namespace = "com.plusmobileapps.konnectivity"
+    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     compileSdk = Deps.Android.compileSDK
     defaultConfig {
         minSdk = Deps.Android.minSDK

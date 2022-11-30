@@ -16,6 +16,7 @@ object Deps {
         const val targetSDK = 33
 
         const val androidGradlePlugin = "com.android.tools.build:gradle:7.3.1"
+        const val startUp = "androidx.startup:startup-runtime:1.1.1"
     }
 
     object Compose {
