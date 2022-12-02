@@ -2,18 +2,25 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
+    id("maven-publish")
+    id("convention.publication")
 }
 
+group = "com.plusmobileapps"
+version = Deps.LIBRARY_VERSION
+
 kotlin {
-    android()
+    android {
+        publishLibraryVariants("release", "debug")
+    }
     iosX64()
     iosArm64()
     iosSimulatorArm64()
 
     cocoapods {
-        summary = "Some description for the Shared Module"
-        homepage = "Link to the Shared Module homepage"
-        version = "1.0"
+        summary = "A kotlin multiplatform mobile network connectivity checker"
+        homepage = "https://github.com/plusmobileapps/konnectivity"
+        version = Deps.LIBRARY_VERSION
         ios.deploymentTarget = "14.1"
         framework {
             baseName = "konnectivity"
