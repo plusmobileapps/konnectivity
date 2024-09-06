@@ -2,6 +2,11 @@
 
 A Kotlin multiplaform mobile library for checking the network connectivity status of a mobile device.
 
+## Supported Targets
+
+* Android
+* iOS - must use physical device to test, the iOS simulator does not work
+
 ## Setup
 
 ```kotlin
